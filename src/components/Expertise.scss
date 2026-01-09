@@ -1,0 +1,201 @@
+.expertise {
+    padding: 8rem 4rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+
+    @media (max-width: 768px) {
+        padding: 4rem 2rem;
+    }
+
+    &__container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    &__header {
+        margin-bottom: 4rem;
+        max-width: 600px;
+    }
+
+    &__label {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        opacity: 0.9;
+    }
+
+    &__title {
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    &__divider {
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin-bottom: 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 3rem 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__item-header {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        position: relative;
+
+        @media (max-width: 768px) {
+            gap: 2rem;
+        }
+    }
+
+    &__item-number {
+        font-size: 2rem;
+        font-weight: 700;
+        opacity: 0.8;
+    }
+
+    &__item-preview {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex: 1;
+    }
+
+    &__item-title {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    &__item-subtitle {
+        font-size: 1.1rem;
+        opacity: 0.8;
+    }
+
+    &__toggle {
+        width: 45px;
+        height: 45px;
+        background-color: var(--white);
+        color: var(--primary-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    &__item-content {
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        gap: 4rem;
+        margin-top: 2rem;
+        overflow: hidden;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+        @media (max-width: 900px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__image-wrapper {
+        width: 100%;
+        aspect-ratio: 4/3;
+        border-radius: 15px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    &__stat {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    &__stat-value {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    &__stat-desc {
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+
+    &__text {
+        line-height: 1.6;
+        opacity: 0.9;
+        max-width: 600px;
+    }
+
+    &__btn {
+        align-self: flex-start;
+        background-color: var(--white);
+        color: var(--primary-color);
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.2s;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+/* Animations for accordion */
+.expertise-collapse-enter {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+}
+
+.expertise-collapse-enter-active {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: 2rem;
+}
+
+.expertise-collapse-exit {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: 2rem;
+}
+
+.expertise-collapse-exit-active {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+}

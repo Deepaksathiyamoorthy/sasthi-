@@ -1,0 +1,42 @@
+@import 'aos/dist/aos.css';
+
+/* Global Styles */
+:root {
+    --primary-color: #20B2AA;
+    /* Teal/Sea Green from design */
+    --text-color: #333333;
+    --bg-color: #F5F7FA;
+    /* Light grey/blue background */
+    --white: #FFFFFF;
+    --font-family: 'Inter', sans-serif;
+}
+
+html {
+    font-size: 70%;
+    /* Scales down all rem-based sizes to match 70% zoom requirement */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
